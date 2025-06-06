@@ -19,6 +19,7 @@ Este proyecto es una API REST sencilla que implementa operaciones básicas de un
    ```bash
    git clone https://github.com/curso-uam/calculadora-api.git
    cd calculadora-api
+   pip install -r requirements.txt 
 
 2. Ejecuta la API:
    uvicorn main:app --reload
