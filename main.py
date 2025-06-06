@@ -37,6 +37,22 @@ def suma(datos: Request):
     resultado = datos.a + datos.b
     return {"resultado": resultado}
 
+@app.post("/resta")
+def resta(datos: Request):
+    """
+    Realiza la resta de dos números.
+
+    Parámetros:
+    - a (float): primer número
+    - b (float): segundo número
+
+    Retorna:
+    - resultado (float): resta de a y b
+    """
+    resultado = datos.a - datos.b
+    return {"resultado": resultado}
+
+
 @app.get("/factorial/{n}")
 def factorial(n: int):
     """
