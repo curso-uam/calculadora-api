@@ -11,7 +11,7 @@ from typing import Optional
 
 app = FastAPI(title="Calculadora API", description="API para operaciones básicas", version="1.0")
 
-class SumaRequest(BaseModel):
+class Request(BaseModel):
     a: float
     b: float
 
@@ -23,7 +23,7 @@ def inicio():
     return {"mensaje": "Bienvenido a la Calculadora API"}
 
 @app.post("/suma")
-def suma(datos: SumaRequest):
+def suma(datos: Request):
     """
     Realiza la suma de dos números.
 
