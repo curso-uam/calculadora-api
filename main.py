@@ -9,7 +9,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Optional
 
-app = FastAPI(title="Calculadora API", description="API para operaciones básicas", version="1.0")
+app = FastAPI(title="Calculadora API FastAPI", description="API para operaciones básicas", version="1.0")
 
 class Request(BaseModel):
     a: float
