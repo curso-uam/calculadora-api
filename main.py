@@ -52,6 +52,20 @@ def resta(datos: Request):
     resultado = datos.a - datos.b
     return {"resultado": resultado}
 
+@app.post("/multiplicacion")
+def multiplicacion(datos: Request):
+    """
+    Realiza la multiplicacion de dos números.
+
+    Parámetros:
+    - a (float): primer número
+    - b (float): segundo número
+
+    Retorna:
+    - resultado (float): multiplicacion de a y b
+    """
+    resultado = datos.a * datos.b
+    return {"resultado": resultado}
 
 @app.get("/factorial/{n}")
 def factorial(n: int):
