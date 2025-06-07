@@ -1,6 +1,6 @@
 # main.py
 """
-Autor José Luis Quiroz Fabián
+Autor José Luis Quiroz Fabián (JLQF)
 
 API REST básica de calculadora usando FastAPI.
 
