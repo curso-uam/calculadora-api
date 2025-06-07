@@ -1,5 +1,7 @@
 # main.py
 """
+Autor José Luis Quiroz Fabián (JLQF)
+
 API REST básica de calculadora usando FastAPI.
 
 Incluye operaciones de suma y factorial de un número.
