@@ -88,3 +88,13 @@ def factorial(n: int):
         resultado *= i
     return {"resultado": resultado}
 
+@app.get("/naturales/{n}")
+def naturales(n: int):
+    suma=0
+    if n < 0:
+        raise HTTPException(status_code=400, detail="El número debe ser no negativo")
+    for i in range(1, n + 1):
+        suma+=i
+    return {"resultado": suma}
+
+
