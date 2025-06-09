@@ -92,11 +92,26 @@ def factorial(n: int):
 
 @app.get("/naturales/{n}")
 def naturales(n: int):
+    """
+    Calcula la suma de los primero n naturales.
+
+    Parámetros:
+    - n (int): número entero positivo
+
+    Retorna:
+    - resultado (int): suma de los primeros naturales n
+
+    Lanza:
+    - HTTPException si el número es negativo
+    """
+
     suma=0
     if n < 0:
         raise HTTPException(status_code=400, detail="El número debe ser no negativo")
     for i in range(1, n + 1):
         suma+=i
     return {"resultado": suma}
+
+
 
 
