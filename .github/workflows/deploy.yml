@@ -3,12 +3,12 @@ name: Despliegue Continuo jquiroz.net
 on:
   push:
     branches:
-      - master
+      - main
 
   pull_request:
     types: [closed]
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -28,7 +28,7 @@ jobs:
       run: |
        ssh -o StrictHostKeyChecking=no tscc@jquiroz.net << 'EOF'
           cd /home/tscc/pruebas/calculadora-api
-          git pull origin master
+          git pull origin main
           source /home/tscc/pruebas/calculadora-api/.ambiente/bin
           pip install -r requeriments.txt || pip install fastapi uvicorn
 
